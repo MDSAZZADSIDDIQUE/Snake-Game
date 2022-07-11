@@ -1,10 +1,14 @@
 #include <GL/gl.h>
 #include <GL/glut.h>
+#include <stdlib.h>
 #include "game.h"
 
 #define COLUMNS 40
 #define ROWS 40
-#define FPS 10
+int fps =  10;
+
+bool gameOver = false;
+int score = 0;
 
 void keyboard_callback(int, int, int);
 void timer_callback(int);
@@ -39,7 +43,17 @@ void display_callback()
     glClear(GL_COLOR_BUFFER_BIT);
     drawGrid();
     drawSnake();
+    drawFood();
     glutSwapBuffers();
+    if (gameOver)
+    {
+        char scores[10];
+        itoa(score, scores, 10);
+        char text[50] = "Your score: ";
+        strcat(text, scores);
+        MessageBox(0, text, "Game Over", 0);
+        exit(0);
+    }
 }
 
 void reshape_callback(int width, int height)
@@ -54,7 +68,7 @@ void reshape_callback(int width, int height)
 void timer_callback(int)
 {
     glutPostRedisplay();
-    glutTimerFunc(1000/FPS, timer_callback, 0);
+    glutTimerFunc(1000/fps, timer_callback, 0);
 }
 
 void keyboard_callback(int key, int, int)

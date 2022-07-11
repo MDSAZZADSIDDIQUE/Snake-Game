@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1657560970 source:c:\users\mdsaz\onedrive\documents\snake game\main.cpp
+1657567382 source:c:\users\mdsaz\onedrive\documents\snake game\main.cpp
 	<GL/gl.h>
 	<GL/glut.h>
+	<stdlib.h>
 	"game.h"
 
 1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\gl.h
@@ -874,10 +875,11 @@
 1526093414 c:\program files\codeblocks\mingw\x86_64-w64-mingw32\include\gl\glu.h
 	<GL/gl.h>
 
-1657558114 c:\users\mdsaz\onedrive\documents\snake game\game.h
+1657566176 c:\users\mdsaz\onedrive\documents\snake game\game.h
 
-1657560920 source:c:\users\mdsaz\onedrive\documents\snake game\game.cpp
+1657567362 source:c:\users\mdsaz\onedrive\documents\snake game\game.cpp
 	<GL/gl.h>
 	<GL/glut.h>
+	<ctime>
 	"game.h"
 
